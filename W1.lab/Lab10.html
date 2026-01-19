@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>lab1.10</title>
+</head>
+<body>
+
+  <h2>Filter Items</h2>
+
+  <input type="text" id="search" placeholder="Type to filter..." />
+
+  <ul id="list"></ul>
+
+  <script>
+   
+    let items = ["Book", "Pen", "Pencil", "Paper", "Backpack"];
+
+    const ul = document.getElementById("list");
+    const input = document.getElementById("search");
+
+   
+    function render(filterText) {
+    
+      ul.innerHTML = "";
+
+     
+      const filteredItems = items.filter(item =>
+        item.includes(filterText)
+      );
+
+      
+      filteredItems.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+    }
+
+    
+    input.addEventListener("input", () => {
+     
+      render(input.value);
+    });
+
+    
+    render("");
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab 1.6</title>
+  </head>
+  <body>
+    <div id="card">
+      <h3 id="user-name"></h3>
+      <p id="user-role"></p>
+    </div>
+    <button id="promote-btn">Promote to Admin</button>
+  </body>
+  <script>
+    let user = { name: "sok", role: "Student" };
+
+    const cardEl = document.getElementById("card");
+    const nameEl = document.getElementById("user-name");
+    const roleEl = document.getElementById("user-role");
+    const btnEl = document.getElementById("promote-btn");
+    btnEl.addEventListener("click", function () {
+      user.role = "Admin";
+      render();
+    });
+
+    function render() {
+      nameEl.textContent = user.name;
+      roleEl.textContent = user.role;
+    }
+
+    render();
+  </script>
+</html>
