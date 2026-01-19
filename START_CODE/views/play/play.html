@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../../css/index.css" />
+    <link rel="stylesheet" href="../../css/play.css" />
+    <script defer src="./play.js" type="module"></script>
+  </head>
+  <body>
+    <div class="nav-bar">
+      <h1><a href="../../index.html" style="text-decoration: none; color: inherit;">Quiz App</a></h1>
+      <ul class="nav-option">
+        <li class="nav" id="edit">
+          <a href="../edit/edit.html">Edit quiz</a>
+        </li>
+        <li class="nav active" id="play">
+          <a href="./play.html">Play quiz</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="start">
+      <img src="../../asset/emoji_1.svg" alt="Start Brain" style="width: 300px; display: block; margin: 20px auto;">
+      <div id="btn-start" style="text-align: center; cursor: pointer; background: #8e24aa; color: white; padding: 10px; border-radius: 5px; width: 200px; margin: 0 auto;">Start Quiz!</div>
+    </div>
+
+    <div id="quiz" style="display: none">
+      <div id="question">QQQQQQQQ</div>
+
+      <div id="choices">
+        <div class="choice" id="A">AAAA</div>
+        <div class="choice" id="B">BBBB</div>
+        <div class="choice" id="C">CCCC</div>
+        <div class="choice" id="D">DDDD</div>
+      </div>
+    </div>
+    
+    <div id="progress" style="display: none">
+      <div id="done"></div>
+    </div>
+    
+    <div id="scoreContainer" style="display: none"></div>
+  </body>
+</html>
